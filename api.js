@@ -31,8 +31,7 @@ async function fetchData(url) {
 }
 
 refreshButton.addEventListener("click", () => {  
-  fetchData(endpoint);
+  location.reload()
 });
 
-//  When page loads it shows first joke.
 fetchData(endpoint);

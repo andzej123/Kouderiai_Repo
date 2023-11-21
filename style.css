@@ -39,7 +39,7 @@
   margin: 0 auto;
   width:500px;
   height: 300px;
-  background-image: url("https://picsum.photos/500/300");
+  background-image: url("https://picsum.photos/500/300/?blur");
   background-size: cover;
   display: grid;
   justify-items: center;
@@ -48,6 +48,7 @@
 }
 
 #joke{
+  padding: 1rem;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.486);
   border-radius: 5px;
