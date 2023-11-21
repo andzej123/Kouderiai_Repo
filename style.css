@@ -1,0 +1,34 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+    
+    .btn{
+    
+    font-family: Raleway;
+    font-weight: 100;
+    font-size: 20px;
+    color: #fff;
+    background: linear-gradient(90deg, #0066CC 0%, #00b4d8 100%);
+    padding: 15px 20px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    border-radius: 50px;
+    transition : 371ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    }
+    
+    .btn:hover{
+    
+    transition : 371ms;
+    padding: 10px 26px;
+    transform : translateY(-0px);
+    background: linear-gradient(90deg, #0066CC 0%, #00b4d8 100%);
+    color: #ffffff;
+    border: none;
+    }
+    
+
