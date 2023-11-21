@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
+*{
+  box-sizing: border-box;
+}
+
 .btn {
   font-family: "Raleway", sans-serif;
   font-weight: 100;
   font-size: 20px;
   color: #fff;
-  background: linear-gradient(90deg, #0066cc 0%, #00b4d8 100%);
+  background: linear-gradient(90deg, #0066cc56 0%, #00b4d879 100%);
   padding: 15px 20px;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
@@ -14,18 +18,39 @@
   border-radius: 50px;
   transition: 371ms;
   transform: translateY(0);
-  display: flex;
+  /* display: flex; */
   flex-direction: row;
   align-items: center;
   cursor: pointer;
   text-transform: uppercase;
+  
 }
 
 .btn:hover {
   transition: 371ms;
   padding: 15px 26px;
   transform: translateY(-0px);
-  background: linear-gradient(90deg, #0066cc 0%, #00b4d8 100%);
+  background: linear-gradient(90deg, #0066cc75 0%rgba(0, 180, 216, 0.514)d8 100%);
   color: #ffffff;
   border: none;
+}
+
+#background-image{
+  margin: 0 auto;
+  width:500px;
+  height: 300px;
+  background-image: url("https://picsum.photos/500/300");
+  background-size: cover;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+}
+
+#joke{
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.486);
+  border-radius: 5px;
+  max-width: 60%;
+  text-align: center;
 }
