@@ -1,4 +1,5 @@
-const joke = document.getElementById("joke")
+const joke = document.getElementById("joke");
+const refreshButton = document.getElementById("refresh");
 
 let options = {
     method: 'GET',
@@ -11,11 +12,14 @@ let options = {
   fetch(url,options)
         .then(res => res.json()) // parse response as JSON
         .then(data => {
-          // console.log(data)
           joke.innerHTML = `${data[0].joke}`;
         })
         .catch(err => {
             console.log(`error ${err}`)
         }); 
 
-fetch(url, options);
+
+refreshButton.addEventListener('click', () => {  
+  location.reload();
+  fetch(url, options);
+});
