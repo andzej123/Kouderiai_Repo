@@ -1,25 +1,38 @@
-const joke = document.getElementById("joke");
+const jokePlace = document.getElementById("joke");
 const refreshButton = document.getElementById("refresh");
 
-let options = {
-    method: 'GET',
-    headers: { 'x-api-key': 'toblJR7XPlWoRRarN4Dh9Q==LIpHbJkKDuEVwrYT' }
+// let options = {
+//   method: "GET",
+//   headers: { "x-api-key": "toblJR7XPlWoRRarN4Dh9Q==LIpHbJkKDuEVwrYT" },
+// };
+
+// let url = "https://api.api-ninjas.com/v1/jokes";
+
+// fetch(url, options)
+//   .then((res) => res.json()) // parse response as JSON
+//   .then((data) => {
+//     joke.innerHTML = `${data[0].joke}`;
+//   })
+//   .catch((err) => {
+//     console.log(`error ${err}`);
+//   });
+
+const endpoint = "https://v2.jokeapi.dev/joke/Programming?type=single";
+
+async function fetchData(url) {
+  const apiUrl = url;
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    jokePlace.innerHTML = `${data.joke}`;
+  } catch (err) {
+    console.log(err.message);
   }
-  
-  let url = 'https://api.api-ninjas.com/v1/jokes'
-  
-  
-  fetch(url,options)
-        .then(res => res.json()) // parse response as JSON
-        .then(data => {
-          joke.innerHTML = `${data[0].joke}`;
-        })
-        .catch(err => {
-            console.log(`error ${err}`)
-        }); 
+}
 
-
-refreshButton.addEventListener('click', () => {  
-  location.reload();
-  fetch(url, options);
+refreshButton.addEventListener("click", () => {  
+  fetchData(endpoint);
 });
+
+//  When page loads it shows first joke.
+fetchData(endpoint);
